@@ -1,0 +1,232 @@
+.spacing {
+    margin-bottom: 10px;
+}
+
+.block-address {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .2);
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+}
+
+.span-icon {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.group-input {
+    width: max-content;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.span-label,
+.label {
+    font-size: 1.7em;
+    line-height: 1em;
+    display: block;
+    font-weight: bold;
+    width: 122px;
+    text-align: right;
+    display: block;
+    flex-shrink: 0;
+}
+
+.span-value,
+.input {
+    width: auto;
+    height: 28px;
+    font-size: 1.7em;
+    padding-left: 15px;
+    display: block;
+}
+
+.input:disabled {
+    background: transparent;
+    border: none;
+    color: rgb(59, 59, 59);
+}
+
+
+/* CONTAINER MORE */
+
+.position_relative {
+    position: relative;
+    height: auto;
+}
+
+.container-more {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: 100ms ease-in;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.content-scroll {
+    width: auto;
+}
+
+.ctn {
+    /* box-shadow: inset 0 0px 3px rgba(0,0,0,.2);
+    border-radius: 5px; */
+    transition: 200ms;
+}
+
+.label-icon-container_more {
+    width: 100%;
+    height: 48px;
+    display: block;
+    position: relative;
+    padding: 11px 10px;
+    transition: 200ms;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:active {
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, .2);
+    }
+    svg {
+        width: 26px;
+        height: 26px;
+        float: right;
+        transform: rotate(180deg);
+        transition: 100ms ease-in;
+    }
+}
+
+.input-checkbox-more {
+    display: none;
+    &:checked~.container-more {
+        height: 236px;
+    }
+    &:checked+.label-icon-container_more>svg {
+        transform: rotate(0);
+    }
+    &:checked+.label-icon-container_more>.more-view {
+        display: none;
+    }
+    &:checked+.label-icon-container_more>.minus-view {
+        display: block !important;
+    }
+}
+
+.button {
+    width: auto;
+    height: 42px;
+    border: none;
+    font-size: 2em;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, .2);
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+
+/*  */
+
+.container-options-address {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.label-category {
+    font-size: 1em;
+}
+
+.input-category {
+    width: 70%;
+    min-width: 250px;
+    height: 40px;
+    font-size: 1em;
+    padding-left: 20px;
+    display: block;
+    margin-top: 5px;
+}
+
+.span-icon-table {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    padding: 8px;
+    transition: 150ms;
+    cursor: pointer;
+    svg {
+        width: 24px;
+        height: 24px;
+        pointer-events: none;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.option {
+    opacity: 1;
+}
+
+.checkbox-category {
+    display: none;
+    &:checked~.content-options-address {
+        width: auto;
+    }
+    &:checked+label>.option {
+        opacity: 0;
+    }
+    &:checked+label>.close {
+        opacity: 1;
+    }
+}
+
+.content-options-address {
+    width: 0;
+    height: auto;
+    position: absolute;
+    right: 35px;
+    top: 5px;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.option-address {
+    padding: 10px;
+    border-radius: 5px;
+    transition: 100ms;
+    &:active {
+        color: #fff;
+        background: rgb(154, 154, 154);
+        transform: scale(.85)
+    }
+    &:hover {
+        background: #eeeeee;
+        color: #727272;
+    }
+}

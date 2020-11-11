@@ -1,0 +1,193 @@
+// 
+.content-input {
+    width: 100%;
+    height: 46px;
+    position: relative;
+    border: solid 1px rgb(168, 168, 168);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.input-search {
+    width: 100%;
+    height: 100%;
+    font-size: 1.7em;
+    padding-left: 15px;
+    background: #fff;
+    border: none;
+    outline: none;
+    padding-left: 50px;
+}
+
+// 
+.content-search {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 5000;
+    &:focus {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &::placeholder {
+        color: #000;
+    }
+}
+
+// Animação e controle de estado para abertura do container search
+.show-content_input {
+    height: 60px;
+    border: none;
+    display: block;
+    border-bottom: solid 1px rgb(168, 168, 168);
+}
+
+.show-container_suggestion {
+    display: block;
+    border: none;
+    border-top: solid 1px rgb(168, 168, 168);
+}
+
+
+/* icone de voltar */
+
+.icon-back-input-search {
+    width: 52px;
+    height: 52px;
+    padding: 15px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    transform: translateX(-60px);
+    transition: 100ms;
+    cursor: pointer;
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: rgb(87, 87, 87);
+        pointer-events: none;
+    }
+}
+
+.show-icon_back {
+    animation: showIcon 150ms 30ms both;
+}
+
+.hide-icon_back {
+    animation: hideIcon 150ms both;
+}
+
+@keyframes showIcon {
+    0% {
+        transform: translateX(-60px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes hideIcon {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-60px);
+    }
+}
+
+.close-icon-search {
+    display: none;
+}
+
+
+/* icone de deletar busca */
+
+.container-delete-search {
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    padding: 13px;
+    display: none;
+    user-select: none;
+    cursor: pointer;
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: rgb(87, 87, 87);
+        transition: 100ms;
+    }
+    &:active>svg {
+        transform: scale(0.65);
+    }
+}
+
+
+/* containe autosuggest */
+
+.container-autosuggestion {
+    width: 100%;
+    height: calc(100% - 60px);
+    background: #fff;
+    overflow: {
+        x: hidden;
+        y: auto
+    }
+    padding: 10px 25px;
+}
+
+.suggestion-correctly-word {
+    font-size: 1em;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.list-result-autosuggestion {
+    width: 100%;
+    height: auto;
+    transition: 100ms;
+    user-select: none;
+    color: #000;
+}
+
+.last-searchs {
+    padding-top: 15px;
+    margin-bottom: 7px;
+}
+
+.last-searchs {
+    font-size: 1.7em;
+    line-height: 1em;
+}
+
+@media screen and (min-width:550px) {
+    .content-search {
+        width: 54vw;
+        max-width: 500px;
+        min-width: 330px;
+        height: 100vh;
+        right: 0;
+        top: -11px;
+        left: auto;
+        position: absolute;
+        z-index: 2000;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+    }
+    .content-input,
+    .container-autosuggestion {
+        box-shadow: none;
+    }
+    .back-icon-search {
+        display: none;
+    }
+    .close-icon-search {
+        display: block;
+    }
+}

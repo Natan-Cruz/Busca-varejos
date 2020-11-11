@@ -1,0 +1,126 @@
+.container-sacola {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 5000;
+}
+
+.box-relative-cart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.content-cart {
+    width: 100%;
+    height: 75%;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 300ms;
+    transform: translateY(80vh);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px
+}
+
+.background-opacity-black-cart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    transition: 150ms;
+    opacity: 0;
+}
+
+.header-sacola {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+}
+
+.expand-content-icon {
+    width: 50px;
+    height: 30px;
+    padding: 12px 0;
+    position: absolute;
+    top: -26px;
+    left: calc(50% - 25px);
+}
+
+.content-expand-icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    display: block;
+    cursor: pointer;
+}
+
+// CLOSE ICON CART
+.close-icon-cart {
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    svg {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        transition: 100ms;
+        pointer-events: none;
+    }
+    &:active {
+        background: #e4e4e4;
+    }
+    &:active svg {
+        transform: scale(0.6);
+    }
+}
+
+// 
+.container-scroll {
+    width: 100%;
+    height: calc(100% - 170px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+.span-unit-sacola {
+    font-size: 1.7em;
+    color: #000;
+    line-height: 1em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+
+@media screen and (min-width:550px) and (max-width:999px) {
+    .content-cart {
+        width: 80%;
+        max-width: 800px;
+        left: calc(50% - 40%);
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .content-cart {
+        width: 800px;
+        left: calc(50% - 400px);
+    }
+}

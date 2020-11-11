@@ -1,0 +1,149 @@
+/* DESCRIÇAO DO PRODUTO */
+
+.description-product {
+    font-size: 1.8em;
+    line-height: 1em;
+    color: #000;
+    padding: 10px 0;
+    color: #4b4b4b;
+    border-bottom: solid 1px #ccc
+}
+
+// 
+.text-medium {
+    font-size: 1.9em;
+}
+
+.price,
+.price-discount {
+    font-size: 2.5em;
+    height: 1em;
+    margin: 15px 0;
+}
+
+.old-price {
+    color: #616161;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #f93e3e;
+        transform: rotate(10deg) translate(2px, 8px);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.price-discount {
+    margin-left: 25px;
+    height: 1em;
+}
+
+.span-unit::first-letter {
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+
+.textarea-message {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    font-size: 1.7em;
+    padding: 10px;
+    border: solid 1px #c8c8c8;
+    border-radius: 5px;
+}
+
+.product-price {
+    font-size: 1.8em;
+}
+
+.btn {
+    width: 100%;
+    height: 40px;
+    font-size: 1.5em;
+}
+
+
+/*  */
+
+.spacing {
+    margin: 15px 0;
+}
+
+.align-left {
+    padding-left: 10px;
+}
+
+
+/*  */
+
+
+/* PRODUCT QUATITY  */
+
+.row-horizontal-modal {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.container-input-row {
+    width: 110px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px rgba(165, 165, 165, .5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-quantity-modal {
+    width: 40px;
+    height: 100%;
+    border: none;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+.btn-controll-input {
+    width: 40px;
+    height: 100%;
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    user-select: none;
+    border: {
+        top-left-radius: 5px;
+        bottom-left-radius: 5px;
+    }
+    ;
+    &:active {
+        background-color: #ccc;
+    }
+    &:hover {
+        background-color: rgb(230, 230, 230);
+    }
+    svg {
+        transition: 100ms;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    &:active svg {
+        transform: scale(.7);
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
